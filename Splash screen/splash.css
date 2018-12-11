@@ -1,0 +1,46 @@
+body{
+    background-color: #1a134b;
+}
+#middle{
+    width: 500px;
+    float: left;
+   position: absolute;
+   top: 20%;
+   left: 32%;
+}
+h1{
+    font-family: monospace;
+    font-size: 200%;
+    text-align: center;
+    color: #5ce1e6;
+    height: 5px;
+}
+h1:hover{
+    color: white;
+    cursor: pointer;
+}
+#snake{
+    position: absolute;
+    right: 0px;
+    bottom: 0px;  
+}
+#ladder{
+    left: 0px;
+    top: 0px;
+}
+#stats{
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+}
+h2{
+    color: #5ce1e6;
+    font-family: monospace;
+    height: 5px;
+}
+.color{
+    color: pink;
+}
+a{
+    text-decoration: none;
+}
