@@ -63,9 +63,11 @@ body{
 .click{
     position: absolute;
     bottom: 55%;
-    left: 5%;
+    left: 3%;
     font-family: monospace;
     font-size: 250%;
     color: #5ce1e6;
+    background-color: #1a134b;
+    border: none;
     cursor: pointer;
 }

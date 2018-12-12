@@ -1,18 +1,18 @@
 var dice = {
-    roll: function () {
+   roll: function () {
         var number = Math.floor(Math.random() * 6) + 1;
         return number;
         }   
     }
 
-var click = document.getElementById('die');
+var button = document.getElementById("click");
 
-click.onclick = function(){
+button.onclick = function(){
     var result = dice.roll();
     print(result);
 }
 
 function print(number){
     var result = document.getElementById('die');
-    result.innerHTML = number;
+    result.innerHTML = '<img src="die' + number + '.jpg">';
 }
