@@ -71,9 +71,9 @@ body{
     border: none;
     cursor: pointer;
 }
-.pion{
+.pion1{
     float: left;
-    left: 30%;
-    top: 30%;
+    left: 25%;
+    top: 35%;
     position: absolute;
 }
