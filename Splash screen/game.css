@@ -73,9 +73,10 @@ body{
 }
 .pion1{
     float: left;
-    left: 30%;
-    top: 30%;
+    left: 20%;
+    top: 20%;
     position: absolute;
+    visibility: visible;
 }
 .pion2{
     float: left;
@@ -94,4 +95,11 @@ body{
     left: 30%;
     top: 30%;
     position: absolute;
+}
+.pion{
+    float: left;
+    left: 20%;
+    top: 20%;
+    position: absolute;
+    visibility: hidden;
 }
