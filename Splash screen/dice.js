@@ -36,6 +36,6 @@ function move(number){
     console.log("Moved to" +  currentPlayerPosition);
     var position = document.getElementById(currentPlayerPosition);
     position.innerHTML = '<img class="pion" src="player.jpg">';
-    previousPosition.innerHTML = null;
+    previousPosition.innerHTML = ;
 }
 
