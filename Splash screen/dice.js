@@ -19,23 +19,41 @@ function print(number){
     move(number);
 }
 
-const players = [{
-    name: "Player1",
-    position: 1,
-    color: "gold",
-},{
-    name: "Player2",
-    position: 1,
-    color: "blue",
-}]
 
 let currentPlayerPosition = 1;
-function move(number){
-    var previousPosition = document.getElementById(currentPlayerPosition);
-    currentPlayerPosition += number;
-    console.log("Moved to" +  currentPlayerPosition);
-    var position = document.getElementById(currentPlayerPosition);
-    position.innerHTML = '<img class="pion" src="player.jpg">';
-    previousPosition.innerHTML = null;
+let playerTurn = 1;
+let turn = 0;
+
+const players = [{
+    name: "Player 1",
+    position: 1,
+},{
+    name: "Player 2",
+    position: 1,
+},{
+    name: "Player 3",
+    position: 1,
+},{
+    name: "Player 4",
+    position: 1,
+}];
+
+
+function move(number){  
+        var previousposition = document.getElementById(players[turn].position + "p" + playerTurn);
+        previousposition.style.visibility ="hidden";
+        var currentposition = document.getElementById(players[turn].position + number + "p" + playerTurn);
+        currentposition.style.visibility = "visible";
+        players[turn].position = players[turn].position + number;
+        console.log("Moved to" +  players[turn].position);
+        if (playerTurn != 4) {
+           playerTurn = playerTurn + 1;
+            turn = turn + 1;
+        } else {
+            playerTurn = 1;
+            turn = 0;
+        }
 }
+
+
 
