@@ -9,6 +9,8 @@ body{
     left: 15%;
     height: 75%;
     top: 17%;
+    background: url(board2.png);
+    background-size: 610px 510px;
 }
 .bord{
     position: relative;
@@ -106,4 +108,13 @@ body{
     top: 20%;
     position: absolute;
     visibility: hidden;
+}
+
+#overlay{
+    float: left;
+    position: absolute;
+    width: 40%;
+    left: 15%;
+    height: 70%;
+    top: 17%;
 }
