@@ -50,10 +50,9 @@ body{
 }
 .player{
     font-family: monospace;
-    color: #ffde59;
     float: left;
     top: 15%;
-    position: relative;
+    position: absolute;
     font-size: 200%;
     left: 4%;
 }
@@ -113,4 +112,38 @@ body{
     left: 15%;
     height: 70%;
     top: 17%;
+}
+#player1{
+    color: #ffde59;
+    visibility: visible;
+}
+#player2{
+    color: #ff66c4;
+    visibility: hidden;
+}
+#player3{
+    color: #5ce1e6;
+    visibility: hidden;
+}
+#player4{
+    color: orange;
+    visibility: hidden;
+}
+.prevmove{
+    position: relative;
+    font-family: monospace;
+    font-size: 300%;
+    float: right; 
+    top: 3%;
+    right: 9%;
+    color: #5ce1e6;
+}
+.nextmove{
+    position: absolute;
+    font-family: monospace;
+    font-size: 300%;
+    float: right; 
+    top: 3%;
+    color: #5ce1e6;
+    left: 95%;
 }
