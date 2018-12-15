@@ -44,30 +44,19 @@ function move(number){
         var currentposition = document.getElementById(players[turn].position + number + "p" + playerTurn);
         players[turn].position = players[turn].position + number;
         win(players[turn].position);
-        previousposition.style.visibility = "hidden";
-        currentposition.style.visibility = "visible";
-        console.log("Moved to" +  players[turn].position);
-        snakesLadders(players[turn].position)
-        var oldname = document.getElementById("player" + playerTurn);
-        if (playerTurn != 4) {
-           playerTurn = playerTurn + 1;
-            turn = turn + 1;
-        } else {
-            playerTurn = 1;
-            turn = 0;
-        }
-        var newname = document.getElementById("player" + playerTurn);
-        oldname.style.visibility = "hidden";
-        newname.style.visibility = "visible";
+        moveLoop(previousposition, players[turn].position, number, playerTurn);
+        snakesLadders(players[turn].position, number);
+        i = 1;
 }
 
-function snakesLadders(number){
+function snakesLadders(number, moves){
+    setTimeout(function(){
     if(number == 4){
-        var previousposition = document.getElementById(4 + "p" + playerTurn);
-        previousposition.style.visibility ="hidden";
-        var currentposition = document.getElementById(37 + "p" + playerTurn);
-        currentposition.style.visibility = "visible";
-        players[turn].position = 37;
+    var previousposition = document.getElementById(4 + "p" + playerTurn);
+    previousposition.style.visibility ="hidden";
+    var currentposition = document.getElementById(37 + "p" + playerTurn);
+    currentposition.style.visibility = "visible";
+    players[turn].position = 37;
     }
     if(number == 10){
         var previousposition = document.getElementById(10 + "p" + playerTurn);
@@ -174,6 +163,18 @@ function snakesLadders(number){
         currentposition.style.visibility = "visible";
         players[turn].position = 2;
     }
+    var oldname = document.getElementById("player" + playerTurn);
+    if (playerTurn != 4) {
+        playerTurn = playerTurn + 1;
+         turn = turn + 1;
+     } else {
+         playerTurn = 1;
+         turn = 0;
+     }
+        var newname = document.getElementById("player" + playerTurn);
+        oldname.style.visibility = "hidden";
+        newname.style.visibility = "visible";
+    }, moves*250 + 100)
 };
 
 function win(number){
@@ -183,4 +184,17 @@ function win(number){
     }
 }
 
+var i = 0;
 
+function moveLoop(previousposition, playersposition, number, turns){
+    setTimeout(function(){
+        previousposition.style.visibility = "hidden";
+        var nextposition = document.getElementById(playersposition - number + i + "p" + turns);
+        nextposition.style.visibility = "visible";
+        previousposition = document.getElementById(playersposition - number + i + "p" + turns);
+        i++;
+        if(i < number + 1){
+            moveLoop(previousposition, playersposition, number, turns);
+        }
+    }, 250)
+}
