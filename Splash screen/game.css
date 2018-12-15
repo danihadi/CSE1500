@@ -7,7 +7,7 @@ body{
     background-color: #1a134b;
     width: 40%;
     left: 15%;
-    height: 70%;
+    height: 75%;
     top: 17%;
     background: url(board2.png);
     background-size: 610px 510px;
@@ -23,6 +23,10 @@ body{
     color: white;
     font-family: monospace;
     font-size: 100%;
+}
+.Board{
+    float: left;
+    position: absolute;
 }
 #time{
     position: absolute;
